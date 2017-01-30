@@ -366,7 +366,7 @@ namespace PoeHUD.Hud.Preload
             }
 
 
-            PreloadConfigLine exile_alert = Masters.Where(kv => text
+            PreloadConfigLine exile_alert = Exiles.Where(kv => text
                 .EndsWith(kv.Key, StringComparison.OrdinalIgnoreCase)).Select(kv => kv.Value).FirstOrDefault();
             if (exile_alert != null && Settings.Exiles)
             {
