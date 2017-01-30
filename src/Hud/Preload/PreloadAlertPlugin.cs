@@ -28,8 +28,8 @@ namespace PoeHUD.Hud.Preload
         public static Dictionary<string, PreloadConfigLine> Essences;
         public static Dictionary<string, PreloadConfigLine> PerandusLeague;
         public static Dictionary<string, PreloadConfigLine> Strongboxes;
-        public static Dictionary<string, PreloadConfigLine> Preload;
-
+        public static Dictionary<string, PreloadConfigLine> Masters;
+        public static Dictionary<string, PreloadConfigLine> Exiles;
 
         public PreloadAlertPlugin(GameController gameController, Graphics graphics, PreloadAlertSettings settings, SettingsHub settingsHub)
             : base(gameController, graphics, settings)
@@ -131,7 +131,7 @@ namespace PoeHUD.Hud.Preload
                 {"Metadata/Chests/StrongBoxes/MalachaisBox", new PreloadConfigLine { Text = "Malachai Strongbox", FastColor = () => Settings.MalachaiStrongbox }}
             };
 
-            Preload = new Dictionary<string, PreloadConfigLine>
+            Masters = new Dictionary<string, PreloadConfigLine>
             {
                 {"Wild/StrDexInt", new PreloadConfigLine { Text = "Zana, Master Cartographer", FastColor = () => Settings.MasterZana }},
                 {"Wild/Int", new PreloadConfigLine { Text = "Catarina, Master of the Dead", FastColor = () => Settings.MasterCatarina }},
@@ -154,7 +154,11 @@ namespace PoeHUD.Hud.Preload
                 {"MasterStrDex12", new PreloadConfigLine { Text = "Vagan, Weaponmaster (PhysSpells)", FastColor = () => Settings.MasterVagan }},
                 {"MasterStrDex13", new PreloadConfigLine { Text = "Vagan, Weaponmaster (Traps)", FastColor = () => Settings.MasterVagan }},
                 {"MasterStrDex14", new PreloadConfigLine { Text = "Vagan, Weaponmaster (RighteousFire)", FastColor = () => Settings.MasterVagan }},
-                {"MasterStrDex15", new PreloadConfigLine { Text = "Vagan, Weaponmaster (CastOnHit)", FastColor = () => Settings.MasterVagan }},
+                {"MasterStrDex15", new PreloadConfigLine { Text = "Vagan, Weaponmaster (CastOnHit)", FastColor = () => Settings.MasterVagan }}
+            };
+
+            Exiles = new Dictionary<string, PreloadConfigLine>
+            {
                 {"ExileRanger1", new PreloadConfigLine { Text = "Exile Orra Greengate", FastColor = () => Settings.OrraGreengate }},
                 {"ExileRanger2", new PreloadConfigLine { Text = "Exile Thena Moga", FastColor = () => Settings.ThenaMoga }},
                 {"ExileRanger3", new PreloadConfigLine { Text = "Exile Antalie Napora", FastColor = () => Settings.AntalieNapora }},
@@ -353,11 +357,20 @@ namespace PoeHUD.Hud.Preload
             }
 
             
-            PreloadConfigLine alert = Preload.Where(kv => text
+            PreloadConfigLine alert = Masters.Where(kv => text
                 .EndsWith(kv.Key, StringComparison.OrdinalIgnoreCase)).Select(kv => kv.Value).FirstOrDefault();
-            if (alert != null && Settings.Exiles)
+            if (alert != null && Settings.Masters)
             {
                 alerts.Add(alert);
+                return;
+            }
+
+
+            PreloadConfigLine exile_alert = Masters.Where(kv => text
+                .EndsWith(kv.Key, StringComparison.OrdinalIgnoreCase)).Select(kv => kv.Value).FirstOrDefault();
+            if (exile_alert != null && Settings.Exiles)
+            {
+                alerts.Add(exile_alert);
                 return;
             }
         }
