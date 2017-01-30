@@ -38,6 +38,7 @@ namespace PoeHUD.Hud.AdvancedTooltip
         {
             try
             {
+                return;
                 if (!holdKey && WinApi.IsKeyDown(Keys.F9))
                 {
                     holdKey = true;

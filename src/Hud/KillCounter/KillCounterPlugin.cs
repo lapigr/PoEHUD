@@ -35,8 +35,8 @@ namespace PoeHUD.Hud.KillCounter
             {
                 if (!Settings.Enable) { return; }
                 aliveEntities.Clear();
-                countedIds.Clear();
-                counters.Clear();
+                //countedIds.Clear();
+                //counters.Clear();
                 sessionCounter += summaryCounter;
                 summaryCounter = 0;
                 Init();
