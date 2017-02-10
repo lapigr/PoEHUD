@@ -141,6 +141,10 @@ namespace PoeHUD.Framework
                 return string.Empty;
             }
             byte[] mem = ReadMem(addr, length);
+            if (mem.Length == 0)
+            {
+                return String.Empty;
+            }
             if (mem[0] == 0 && mem[1] == 0)
                 return string.Empty;
             string @string = Encoding.Unicode.GetString(mem);
