@@ -20,11 +20,15 @@ namespace PoeHUD.Poe.Elements
             itemInChatTooltip = () => ReadObject<Element>(Address + 0x7B8);
         }
 
-        public ToolTipType ToolTipType {
-            get {
-                try {
+        public ToolTipType ToolTipType
+        {
+            get
+            {
+                try
+                {
                     return (ToolTipType)(toolTip ?? (toolTip = GetToolTipType()));
-                } catch (Exception)
+                }
+                catch (Exception)
                 {
                     return ToolTipType.None;
                 }
