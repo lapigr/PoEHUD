@@ -124,7 +124,7 @@ namespace PoeHUD.Framework
         private static string RTrimNull(string text)
         {
             int num = text.IndexOf('\0');
-            return num > 0 ? text.Substring(0, num) : String.Empty;
+            return num > 0 ? text.Substring(0, num) : text;
         }
 
         /// <summary>
