@@ -174,6 +174,7 @@ namespace PoeHUD.Hud.Menu
             MenuItem xpRateMenu = AddChild(root, "Xph & area", settingsHub.XpRateSettings.Enable, "F10");
             MenuItem areaName = AddChild(xpRateMenu, "Only area name", settingsHub.XpRateSettings.OnlyAreaName);
             AddChild(areaName, "Show latency", settingsHub.XpRateSettings.ShowLatency);
+            AddChild(areaName, "Show fps", settingsHub.XpRateSettings.ShowFps);
             AddChild(areaName, "Latency color", settingsHub.XpRateSettings.LatencyTextColor);
             AddChild(xpRateMenu, "Show in town", settingsHub.XpRateSettings.ShowInTown);
             AddChild(xpRateMenu, "Font size", settingsHub.XpRateSettings.TextSize);
