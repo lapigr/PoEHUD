@@ -8,7 +8,7 @@ namespace MapAndXPLogger
     {
         public MapAndXPLoggerSettings()
         {
-            enableTracking = true;
+            enableTracking = false;
             enableLogging = false;
             xpLoggertextHeight = 16;
             xpLoggerTextColor = new ColorBGRA(100, 240, 80, 255);
