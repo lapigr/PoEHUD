@@ -59,7 +59,6 @@ namespace PoeHUD.Hud.PluginExtension
                 LogMessage("Can't unblock plugin: " + path, 5);
                 return;
             }
-
             var myAsm = Assembly.LoadFrom(path);
             if (myAsm == null) return;
 

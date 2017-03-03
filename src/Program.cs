@@ -51,11 +51,11 @@ namespace PoeHUD
             };
 
 #if !DEBUG
-            MemoryControl.Start();
+         /* MemoryControl.Start();
             if (Scrambler.Scramble(args.Length > 0 ? args[0] : null))
             {
                 return;
-            }
+            }*/
 #endif
 
             Offsets offs;

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeHUD", "PoeHUD.csproj", "{E86368B2-AE1E-4489-A749-E29A0AB48F83}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tools", "Tools\Tools.fsproj", "{5F2AE016-51D1-42C4-95CD-4E12118E3A6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoeFilterParser", "PoeFilterParser\PoeFilterParser.csproj", "{8F5D7D56-7A81-433A-B358-AB297A136183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapAndXPLogger", "..\..\..\MapAndXPLogger\src\MapAndXPLogger\MapAndXPLogger.csproj", "{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,18 @@ Global
 		{8F5D7D56-7A81-433A-B358-AB297A136183}.Release|x64.Build.0 = Release|Any CPU
 		{8F5D7D56-7A81-433A-B358-AB297A136183}.Release|x86.ActiveCfg = Release|Any CPU
 		{8F5D7D56-7A81-433A-B358-AB297A136183}.Release|x86.Build.0 = Release|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|x64.ActiveCfg = Debug|x64
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|x64.Build.0 = Debug|x64
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Debug|x86.Build.0 = Debug|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|x64.ActiveCfg = Release|x64
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|x64.Build.0 = Release|x64
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B3FCF57-02B6-4B1D-BFB2-4AE8BC870081}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

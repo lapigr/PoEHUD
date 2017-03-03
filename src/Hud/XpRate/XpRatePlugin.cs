@@ -60,7 +60,7 @@ namespace PoeHUD.Hud.XpRate
                         !Settings.ShowInTown && GameController.Area.CurrentArea.IsHideout;
                 Vector2 position = StartDrawPointFunc();
                 string fps = $"fps:({GameController.Game.IngameState.CurFps})";
-                string areaName = $"{GameController.Area.CurrentArea.DisplayName}";
+                string areaName = $"{GameController.Area.CurrentArea.DisplayName}"; 
                 Color AreaNameColor = PreloadAlertPlugin.AreaNameColor;
 
                 if (Settings.OnlyAreaName)
