@@ -23,8 +23,7 @@ namespace MapAndXPLogger
 
         public MapAndXPLogger()
         {
-            //PluginName = "MapAndXPLogger";
-            //Initialise();
+            
         }
 
         public override void Initialise()
