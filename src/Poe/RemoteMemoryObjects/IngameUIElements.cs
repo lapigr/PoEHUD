@@ -1,6 +1,5 @@
 using PoeHUD.Poe.Elements;
 using System.Collections.Generic;
-using System.IO;
 
 namespace PoeHUD.Poe.RemoteMemoryObjects
 {
@@ -25,4 +24,3 @@ namespace PoeHUD.Poe.RemoteMemoryObjects
         public ItemOnGroundTooltip ItemOnGroundTooltip => ReadObjectAt<ItemOnGroundTooltip>(0xE10);
     }
 }
-
